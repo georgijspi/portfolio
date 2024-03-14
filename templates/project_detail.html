@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ project.title }}</h1>
+    <!-- Render the article's HTML content -->
+    {{ article_content | safe }}
+</div>
+{% endblock %}
