@@ -62,7 +62,7 @@ const Experience = () => {
 						marginBottom: "40px",
 					}}
 				>
-					I have a background in Content Moderation and an avid software enginer. I am an active member of Redbrick, DCU's Networking Society, as well as DCU Solar Racing.
+					Random flabbergaster descriptive analaysis of a horse's neverending galloping through the fields of burning tires. Showcasing the beauty of ugliness through the depiction of otherworldly artform.
 				</Desc>
 
 				<VerticalTimeline>

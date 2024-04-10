@@ -15,6 +15,10 @@ const Nav = styled.div`
     top: 0;
     z-index: 10;
     color: white;
+
+    @media screen and (max-width: 768px) {
+        height: 3.5em;
+    }
 `;
 
 const NavbarContainer = styled.div`
@@ -134,6 +138,12 @@ const MobileMenu = styled.ul`
         50% { transform: translateY(10px); }
         100% { transform: translateY(0); }
     }
+
+
+
+    @media screen and (max-width: 768px) {
+        top: 3.5em;
+    }
 `;
 
 
@@ -150,18 +160,30 @@ const Navbar = () => {
                 </MobileIcon>
 
                 <NavItems>
-                    <NavLink href="#About">About</NavLink>
-                    <NavLink href="#Portfolio">Portfolio</NavLink>
-                    <NavLink href="#Skills">Skills</NavLink>
-                    <NavLink href="#Education">Education</NavLink>
-                </NavItems>
+                      <NavLink href="#About">About</NavLink>
+                      <NavLink href="#Skills">Skills</NavLink>
+                      <NavLink href="#Experience">Experience</NavLink>
+                      <NavLink href="#Projects">Projects</NavLink>
+                      <NavLink href="#Education">Education</NavLink>
+                    </NavItems>
 
-                {isOpen && (
-                    <MobileMenu isOpen={isOpen}>
-                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">About</NavLink>
-                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Portfolio">Portfolio</NavLink>
-                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">Skills</NavLink>
-                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">Education</NavLink>
+                    {isOpen && (
+                      <MobileMenu isOpen={isOpen}>
+                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
+                          About
+                        </NavLink>
+                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
+                          Skills
+                        </NavLink>
+                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
+                          Experience
+                        </NavLink>
+                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
+                          Projects
+                        </NavLink>
+                        <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
+                          Education
+                        </NavLink>
                         <GithubButton 
                             href={Bio.github} 
                             target="_Blank" 

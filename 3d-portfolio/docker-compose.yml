@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.react-app.rule=Host(`georgijs.dev`)"  # Replace yourdomain.com with your actual domain
+      - "traefik.http.routers.react-app.entrypoints=https"
+      - "traefik.http.routers.react-app.tls=true"
+      - "traefik.http.routers.react-app.tls.certresolver=cloudflare"  # Use your certresolver name if different
+      - "traefik.http.services.react-app.loadbalancer.server.port=80"  # Assuming your React app runs on port 80 inside the container
+
+networks:
+  proxy:
+    external: true

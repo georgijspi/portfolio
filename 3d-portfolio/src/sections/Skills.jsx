@@ -138,7 +138,7 @@ const Skills = () => {
 			<Wrapper>
 				<Title>Skills</Title>
 				<Desc>
-					I have many interests and while it is difficult to focus on one at a time, I enjoy taking my time to learn all I can about the Computer Science industry.
+					Sample description lerum ipsum the flabbergast vlave won't turn unless the horse head is on backwards nearing the end of the reflex point of the mustang.
 				</Desc>
 				<SkillsContainer>
 					{skills.map((skill, index) => (
